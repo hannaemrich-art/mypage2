@@ -1,15 +1,63 @@
 h1{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: red;
+    font-family: myFont2;
+    color: rgb(255, 0, 83);
     font-size: 500%;
 }
 h2{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: myFont;
+    font-size: 150%;
+    color: rgb(255, 0, 83);
 }
 #überschrift{
+    width:auto;
+    background-color: rgb(165, 229, 247);
+    display: flex;
+    justify-content: center;
+    text-align: center;
     padding: 10px;
     padding-left: 20px;
 }
 body{
     background-color: black;
+}
+#tiger{
+    width: 50vb;
+    border: 5vw;
+}
+#container{
+    display:flex;
+}
+#snake{
+    width:50vb;
+    border: 5vw;
+}
+@font-face {
+    font-family: myFont;
+    src: url(./fonts/Nexa-Heavy.ttf);
+}
+@font-face {
+    font-family: myFont2;
+    src: url(./fonts/StretchPro.otf);
+}
+
+p{
+    font-family: myFont;
+    font-size: 150%;
+    text-align: center;
+    color: rgb(165, 229, 247);
+    display: flex;
+}
+#navigation{
+    background-color: rgb(255, 0, 83);
+    height: 4vw;
+    width:auto;
+    margin: 5px;
+    padding: 5px;
+    display:flex;
+}
+#about{
+    display: flex;
+    width: 100%;
+    height: 100%; 
+    object-fit: contain;
 }
