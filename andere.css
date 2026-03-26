@@ -1,0 +1,115 @@
+h1{
+    font-family: myFont2;
+    color: rgb(255, 0, 83);
+    font-size: 500%;
+}
+h2{
+    font-family: myFont;
+    font-size: 350%;
+    color: white;
+}
+#überschrift{
+    width:auto;
+    background-color: rgb(165, 229, 247);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    padding-left: 20px;
+}
+body {
+    background-color: black;
+    margin: 0;
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: myFont;
+    src: url(./fonts/Nexa-Heavy.ttf);
+}
+@font-face {
+    font-family: myFont2;
+    src: url(./fonts/StretchPro.otf);
+}
+
+#rot {
+    background-color: rgb(255, 0, 83);
+    height: 90px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes scroll {
+ 0% { transform: translateX(100%); }
+ 100% { transform: translateX(-100%); }
+}
+.scrolling-text {
+width: 100%;
+overflow: hidden;
+white-space: nowrap;
+box-sizing: border-box;
+animation: scroll 10s linear infinite;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    height: calc(100vh - 200px); /* passt unter Header an */
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.card {
+    flex: 1;              /* nimmt maximalen Platz */
+    height: 120%;         /* füllt Containerhöhe */
+    max-width: 600px;     /* verhindert zu breit */
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-front img,
+.card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.card-back p{
+    margin: 0;
+}
