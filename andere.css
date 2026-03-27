@@ -1,22 +1,62 @@
-h1{
+h1 {
     font-family: myFont2;
     color: rgb(255, 0, 83);
-    font-size: 500%;
+    font-size: clamp(28px, 4vw, 60px);
 }
+
 h2{
     font-family: myFont;
-    font-size: 350%;
+    font-size: 250%;
     color: white;
 }
-#überschrift{
-    width:auto;
+#überschrift {
+    position: relative;
     background-color: rgb(165, 229, 247);
     display: flex;
     justify-content: center;
-    text-align: center;
-    padding: 10px;
-    padding-left: 20px;
+    align-items: center;
+    min-height: 105px;
+    padding: 16px 90px;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
 }
+
+#überschrift h1 {
+    margin: 0 auto;
+    white-space: nowrap;
+    text-align: center;
+}
+
+#überschrift:hover{
+    background-color: black;
+    opacity: 1;
+}
+
+/* Sterne */
+.star {
+    position: absolute;
+    top: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    animation: spin 4s linear infinite;
+}
+
+.star.left {
+    left: 24px;
+}
+
+.star.right {
+    right: 24px;
+}
+
+/* Dreh-Animation */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 body {
     background-color: black;
     margin: 0;
