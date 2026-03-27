@@ -1,22 +1,47 @@
 
-body{
+body {
+    margin: 0;
     overflow: hidden;
     background-color: rgb(255, 0, 83);
 }
 
-#frame_container{
-
-
-    width:100vw;
-    display: flex;
-    justify-content: center;
+#frame_container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
     overflow: hidden;
-
-
 }
 
-#frame{
+.star {
+    width: 220px;
+    height: 220px;
+    justify-self: center;
+    align-self: center;
+    animation: spin 4s linear infinite;
+}
 
-    height:100vh;
+.star.left {
+    grid-column: 1;
+}
 
+#frame {
+    grid-column: 2;
+    height: 100vh;
+    width: auto;
+    display: block;
+}
+
+.star.right {
+    grid-column: 3;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
